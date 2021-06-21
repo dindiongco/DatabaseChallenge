@@ -1,0 +1,10 @@
+SELECT COUNT(CountryCode) FROM city WHERE CountryCode = 'USA';
+SELECT population, lifeexpectancy FROM country WHERE name = 'Argentina';
+SELECT name, lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy DESC LIMIT 1; 
+SELECT ci.name, ci.countrycode, co.name, co.code, co.capital FROM country co JOIN city ci ON co.code = ci.countrycode WHERE code = 'ESP';
+SELECT cl.countrycode, cl.language, co.code, co.region FROM country co JOIN countrylanguage cl ON co.code=cl.countrycode WHERE region = 'Southeast Asia';
+SELECT name FROM city WHERE name LIKE 'f%' LIMIT 25;
+SELECT COUNT(ci.name), ci.countrycode, co.code FROM country co JOIN city ci ON co.code = ci.countrycode WHERE code = 'CHN';
+SELECT name, population FROM country WHERE population IS NOT NULL ORDER BY population ASC LIMIT 1;
+SELECT COUNT(name) FROM country;
+SELECT name,surfacearea FROM country ORDER BY surfacearea DESC LIMIT 10;
